@@ -337,7 +337,16 @@
 /></noscript>
 <!-- End Facebook Pixel Code -->
 <script>
-  window.addEventListener("message", function(event) {
+  window.addEventListener('message', (event) => {
+    console.log(`YO Received message: ${event.data}`);
+    if (window.fbq) {
+      window.fbq("track", "Purchase", {
+          value: 1.23,
+          currency: "RUB"
+      });
+     }
+  });
+  /*window.addEventListener("message", function(event) {
     // (1)
     console.log(event);
     alert("Привет");
@@ -347,7 +356,7 @@
           currency: "RUB"
       });
      }
-  });
+  });*/
 </script>
   
 </body>
