@@ -337,7 +337,10 @@
 /></noscript>
 <!-- End Facebook Pixel Code -->
 <script>
-  window.addEventListener("message", function(event) {
+  window.addEventListener('message', (event) => {
+    console.log(`Received message: ${event.data}`);
+  });
+  /*window.addEventListener("message", function(event) {
     // (1)
     console.log(event);
     alert("Привет");
@@ -347,7 +350,7 @@
         currency: "RUB"
     });
   }
-  });
+  });*/
 </script>
   
 </body>
