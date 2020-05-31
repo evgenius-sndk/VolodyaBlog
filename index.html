@@ -337,7 +337,9 @@
 /></noscript>
 <!-- End Facebook Pixel Code -->
 <script>
-  window.addEventListener("hello", function(event) { // (1)
+  window.addEventListener("message", function(event) {
+    // (1)
+    console.log(event);
     alert("Привет");
      if (window.fbq) {
     window.fbq("track", "Purchase", {
