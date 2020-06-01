@@ -1,0 +1,17 @@
+<html>
+<head>
+</head>
+
+<body>
+  <script>
+    window.addEventListener('message', (event) => {
+      if (event && typeof event.data === 'object' && event.data.mgc === 845738691) {
+        if (window.fbq) {
+          window.fbq("track", event.data.eventName, event.data.eventValue);
+        }
+       }
+      }
+    });
+  </script>
+</body>
+</html
