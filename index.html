@@ -339,15 +339,14 @@ document.write('<script type="application/javascript" src="https://sndkredir.ru/
 /></noscript>
 <!-- End Facebook Pixel Code -->
 <script>
-  /*window.addEventListener('message', (event) => {
-    console.log(`YO Received message: ${event.data}`);
-    if (window.fbq) {
-      window.fbq("track", "Purchase", {
-          value: 1.23,
-          currency: "RUB"
-      });
+  window.addEventListener('message', (event) => {
+    if (event && typeof event.data === 'object' && event.data.mgc === 845738691) {
+      if (window.fbq) {
+        window.fbq("track", event.data.eventName, event.data.eventValue);
+      }
      }
-  });*/
+    }
+  });
   /*window.addEventListener("message", function(event) {
     // (1)
     console.log(event);
