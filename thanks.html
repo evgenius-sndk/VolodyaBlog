@@ -32,7 +32,9 @@
   <script>
     window.addEventListener('message', (event) => {
       if (event && typeof event.data === 'object' && event.data.mgc === 845738691) {
+        console.log(event.data);
         if (window.fbq) {
+          console.log("track", event.data.eventName, event.data.eventValue);
           window.fbq("track", event.data.eventName, event.data.eventValue);
         }
        }
@@ -40,4 +42,4 @@
     });
   </script>
 </body>
-</html
+</html>
