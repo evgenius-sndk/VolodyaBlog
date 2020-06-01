@@ -31,6 +31,9 @@
   
   <script>
     window.addEventListener('message', (event) => {
+      console.log(event.data);
+      console.log(typeof event.data);
+      console.log(event.data.mgc);
       if (event && typeof event.data === 'object' && event.data.mgc === 845738691) {
         console.log(event.data);
         if (window.fbq) {
